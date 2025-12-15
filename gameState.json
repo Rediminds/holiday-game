@@ -1,19 +1,6 @@
 {
   "currentStage": "GIFT_GAME",
-  "activeSessions": {
-    "wx0yZDPOkLAhPjUtAAAD": {
-      "id": "in_13",
-      "name": "Sumit Joshi"
-    },
-    "CJaFS_ygaa6RceifAAAJ": {
-      "id": "in_2",
-      "name": "Ayush Saini"
-    },
-    "NGduKMwIVnKSE6ExAAAL": {
-      "id": "admin_1",
-      "name": "Jai Desai"
-    }
-  },
+  "activeSessions": {},
   "bingo": {
     "items": [
       "Never have I ever re-gifted a present.",

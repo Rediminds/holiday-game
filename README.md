@@ -1,40 +1,184 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# 🎄 Rediminds Holiday Party Game
 
-## Getting Started
+A real-time, interactive holiday party game platform built with Next.js and Socket.io. Features multiple mini-games designed for remote team celebrations.
 
-First, run the development server:
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![Socket.io](https://img.shields.io/badge/Socket.io-4.x-white)
+![Docker](https://img.shields.io/badge/Docker-Ready-blue)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🎮 Games Included
+
+### 1. 🎯 Emoji Game (Intro)
+- Users select emojis that represent their holiday mood
+- Fun icebreaker to start the party
+- Admin can see all selections in real-time
+
+### 2. 🎱 Never Have I Ever Bingo
+- Each player gets a randomized 5x5 bingo card
+- Admin calls out "Never Have I Ever" statements
+- Players mark their cards when statements apply to them
+- **Two Prizes:**
+  - 🎒 **Backpack Prize** - First to complete a row, column, or diagonal
+  - 🎧 **Headphone Prize** - First to complete the X pattern (both diagonals)
+- Race-to-claim system for simultaneous wins
+
+### 3. 🎁 Mystery Gift Game
+- Players see a grid of gift boxes (25 for US/India, 3 for UK/UAE/Lebanon)
+- Open boxes to discover gifts or empty boxes
+- **Shared experience:** All users can open the same boxes
+- Browse multiple gifts before deciding which to claim
+- Once claimed, a gift is no longer available to others
+- Geography-based gift pools (admin sets gifts per region)
+
+### 4. 👕 Spirit Wear Contest
+- Users enter the contest by submitting their holiday outfit
+- Others vote for their favorite
+- Live vote counting
+
+## 🏗️ Architecture
+
+```
+┌─────────────────┐     ┌─────────────────┐
+│   Next.js App   │────▶│  Socket.io      │
+│   (Port 3000)   │◀────│  Server         │
+│                 │     │  (Port 3001)    │
+└─────────────────┘     └─────────────────┘
+         │                      │
+         └──────────┬───────────┘
+                    ▼
+           ┌───────────────┐
+           │ gameState.json│
+           │ (Persistence) │
+           └───────────────┘
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Quick Start
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Development
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+```bash
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Start both servers (in separate terminals)
+npm run dev          # Next.js on port 3000
+node server.js       # Socket.io on port 3001
 
-## Learn More
+# Open http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Docker
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+```bash
+# Using docker-compose
+docker compose up --build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Or build single container
+docker build -t holiday-game .
+docker run -p 3000:3000 -p 3001:3001 holiday-game
+```
 
-## Deploy on Vercel
+## 👤 User Roles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Admin
+- Control game stages
+- Add/remove bingo items
+- Call bingo numbers
+- Add gifts per region
+- View all claims and statistics
+- Reset game data
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+**Admin accounts:** Users with IDs starting with `admin_` in `users.json`
+
+### Participant
+- Join games
+- Interact with all mini-games
+- Claim gifts
+- Vote in contests
+
+## 📁 Project Structure
+
+```
+holiday-game/
+├── src/
+│   ├── components/
+│   │   ├── AdminDashboard.js  # Admin control panel
+│   │   ├── Bingo.js           # Bingo game
+│   │   ├── GiftGame.js        # Gift box game
+│   │   ├── EmojiGame.js       # Emoji selector
+│   │   ├── SpiritWear.js      # Spirit wear contest
+│   │   ├── Login.js           # User login
+│   │   └── Lobby.js           # Waiting room
+│   ├── context/
+│   │   └── SocketContext.js   # Socket.io provider
+│   └── pages/
+│       ├── index.js           # Main app router
+│       └── api/
+│           └── upload.js      # Image upload API
+├── server.js                   # Socket.io server
+├── users.json                  # User database
+├── gameState.json             # Persistent game state
+├── Dockerfile                 # Combined container
+├── docker-compose.yml         # Multi-container setup
+└── DEPLOY.md                  # GCS deployment guide
+```
+
+## 🌍 Geography-Based Features
+
+Users are assigned to regions in `users.json`:
+- **US** - 21 participants → 25 gift boxes
+- **India** - 13 participants → 25 gift boxes
+- **UK** - 1 participant (Arjun) → 3 gift boxes
+- **UAE** - 1 participant (Mohammed) → 3 gift boxes
+- **Lebanon** - 1 participant (Ramez) → 3 gift boxes
+
+## ⚙️ Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `NEXT_PUBLIC_SOCKET_URL` | Socket.io server URL | `http://localhost:3001` |
+| `PORT` | Socket.io server port | `3001` |
+
+## 🔐 Authentication
+
+Simple password-based login:
+- Users select their name from a dropdown
+- Admin password: `holidayparty` (configurable in Login.js)
+
+## 📡 Socket Events
+
+### Client → Server
+| Event | Description |
+|-------|-------------|
+| `join_session` | User logs in |
+| `admin_set_stage` | Change game stage |
+| `bingo_call_item` | Admin calls a bingo item |
+| `bingo_select_item` | Player marks an item |
+| `gift_open_box` | Open a gift box |
+| `gift_claim` | Claim a discovered gift |
+| `admin_add_gift` | Add gift to inventory |
+
+### Server → Client
+| Event | Description |
+|-------|-------------|
+| `state_update` | Full state sync |
+| `bingo_update` | Bingo state change |
+| `gift_update` | Gift state change |
+| `bingo_winner_announcement` | Winner notification |
+| `gift_box_result` | Result of opening a box |
+
+## 🚢 Deployment
+
+See [DEPLOY.md](./DEPLOY.md) for detailed GCS/Cloud Run deployment instructions.
+
+## 📝 License
+
+Internal use only - Rediminds Inc.
+
+---
+
+Made with ❤️ for Rediminds Holiday Party 2024

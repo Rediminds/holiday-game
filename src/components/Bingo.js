@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSocket } from '../context/SocketContext';
 
 const Bingo = () => {
@@ -7,10 +7,17 @@ const Bingo = () => {
     const [marked, setMarked] = useState([]);
     const [winnerPopup, setWinnerPopup] = useState(null);
     const [canClaim, setCanClaim] = useState({ rowColDiag: false, xPattern: false });
+    const justResetRef = useRef(false);
 
     // Generate and register card, load marked items
     useEffect(() => {
         if (!appState?.bingo?.items || !currentUser || !socket) return;
+
+        // Skip card generation if a reset just happened
+        if (justResetRef.current) {
+            justResetRef.current = false;
+            return;
+        }
 
         const cardStorageKey = `bingo_card_${currentUser.id}`;
         const markedStorageKey = `bingo_marked_${currentUser.id}`;
@@ -81,6 +88,8 @@ const Bingo = () => {
         };
 
         const handleReset = () => {
+            // Set flag to prevent immediate card regeneration
+            justResetRef.current = true;
             // Clear localStorage and reset state
             localStorage.removeItem(`bingo_card_${currentUser.id}`);
             localStorage.removeItem(`bingo_marked_${currentUser.id}`);

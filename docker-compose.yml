@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.nextjs
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_SOCKET_URL=http://localhost:3001
+    depends_on:
+      - socket
+    volumes:
+      - ./gameState.json:/app/gameState.json
+      - ./public/uploads:/app/public/uploads
+
+  socket:
+    build:
+      context: .
+      dockerfile: Dockerfile.socket
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./gameState.json:/app/gameState.json
+    environment:
+      - PORT=3001

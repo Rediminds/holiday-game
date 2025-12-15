@@ -1,0 +1,186 @@
+{
+  "currentStage": "GIFT_GAME",
+  "activeSessions": {
+    "wx0yZDPOkLAhPjUtAAAD": {
+      "id": "in_13",
+      "name": "Sumit Joshi"
+    },
+    "CJaFS_ygaa6RceifAAAJ": {
+      "id": "in_2",
+      "name": "Ayush Saini"
+    },
+    "NGduKMwIVnKSE6ExAAAL": {
+      "id": "admin_1",
+      "name": "Jai Desai"
+    }
+  },
+  "bingo": {
+    "items": [
+      "Never have I ever re-gifted a present.",
+      "Never have I ever eaten an entire batch of cookie dough.",
+      "Never have I ever spilled something sparkly on myself.",
+      "Never have I ever peeked at a gift early.",
+      "Never have I ever forgotten someone's gift until the last minute.",
+      "Never have I ever fallen asleep watching a holiday movie.",
+      "Never have I ever broken an ornament.",
+      "Never have I ever burned something while trying to bake.",
+      "Never have I ever pretended to enjoy a Secret Santa gift.",
+      "Never have I ever eaten dessert for breakfast.",
+      "Never have I ever wrapped a gift so poorly it became a joke.",
+      "Never have I ever received a gift that made me genuinely confused.",
+      "Never have I ever panic-bought a gift at a gas station or drugstore.",
+      "Never have I ever worn an ugly sweater on purpose.",
+      "Never have I ever gotten a random Teams call from Madhu",
+      "Never have I ever worked on a major holiday.",
+      "Never have I ever binged an entire TV show series during a holiday break.",
+      "Never have I ever tried a traditional holiday meal from another country.",
+      "Never have I ever had a sword fight with a wrapping paper tube",
+      "Never have I ever RSVP'd 'maybe' to a holiday party when I already knew I wasn't going",
+      "Never have I ever dramatically complained about the cold while refusing to wear a real coat",
+      "Never have I ever pretended my WI-FI was breaking up just to leave a meeting early.",
+      "Never have I ever worn pajamas on the bottom and a professional top on a Teams call.",
+      "Never have I ever accidentally talked on mute for a solid 10 seconds.",
+      "Never have I ever forgotten I had my camera on while doing something harmless but unprofessional."
+    ],
+    "calledItems": [],
+    "winners": [],
+    "selections": {},
+    "userCards": {
+      "in_2": {
+        "odz": "in_2",
+        "name": "Ayush Saini",
+        "items": [
+          "Never have I ever burned something while trying to bake.",
+          "Never have I ever fallen asleep watching a holiday movie.",
+          "Never have I ever pretended my WI-FI was breaking up just to leave a meeting early.",
+          "Never have I ever worn an ugly sweater on purpose.",
+          "Never have I ever pretended to enjoy a Secret Santa gift.",
+          "Never have I ever forgotten someone's gift until the last minute.",
+          "Never have I ever RSVP'd 'maybe' to a holiday party when I already knew I wasn't going",
+          "Never have I ever wrapped a gift so poorly it became a joke.",
+          "Never have I ever broken an ornament.",
+          "Never have I ever binged an entire TV show series during a holiday break.",
+          "Never have I ever panic-bought a gift at a gas station or drugstore.",
+          "Never have I ever peeked at a gift early.",
+          "FREE SPACE",
+          "Never have I ever forgotten I had my camera on while doing something harmless but unprofessional.",
+          "Never have I ever gotten a random Teams call from Madhu",
+          "Never have I ever spilled something sparkly on myself.",
+          "Never have I ever had a sword fight with a wrapping paper tube",
+          "Never have I ever received a gift that made me genuinely confused.",
+          "Never have I ever dramatically complained about the cold while refusing to wear a real coat",
+          "Never have I ever tried a traditional holiday meal from another country.",
+          "Never have I ever accidentally talked on mute for a solid 10 seconds.",
+          "Never have I ever eaten dessert for breakfast.",
+          "Never have I ever worked on a major holiday.",
+          "Never have I ever eaten an entire batch of cookie dough.",
+          "Never have I ever worn pajamas on the bottom and a professional top on a Teams call."
+        ]
+      },
+      "in_13": {
+        "odz": "in_13",
+        "name": "Sumit Joshi",
+        "items": [
+          "Never have I ever gotten a random Teams call from Madhu",
+          "Never have I ever peeked at a gift early.",
+          "Never have I ever spilled something sparkly on myself.",
+          "Never have I ever broken an ornament.",
+          "Never have I ever panic-bought a gift at a gas station or drugstore.",
+          "Never have I ever eaten an entire batch of cookie dough.",
+          "Never have I ever worn pajamas on the bottom and a professional top on a Teams call.",
+          "Never have I ever re-gifted a present.",
+          "Never have I ever worn an ugly sweater on purpose.",
+          "Never have I ever had a sword fight with a wrapping paper tube",
+          "Never have I ever pretended my WI-FI was breaking up just to leave a meeting early.",
+          "Never have I ever wrapped a gift so poorly it became a joke.",
+          "FREE SPACE",
+          "Never have I ever burned something while trying to bake.",
+          "Never have I ever forgotten someone's gift until the last minute.",
+          "Never have I ever accidentally talked on mute for a solid 10 seconds.",
+          "Never have I ever worked on a major holiday.",
+          "Never have I ever forgotten I had my camera on while doing something harmless but unprofessional.",
+          "Never have I ever tried a traditional holiday meal from another country.",
+          "Never have I ever RSVP'd 'maybe' to a holiday party when I already knew I wasn't going",
+          "Never have I ever pretended to enjoy a Secret Santa gift.",
+          "Never have I ever received a gift that made me genuinely confused.",
+          "Never have I ever binged an entire TV show series during a holiday break.",
+          "Never have I ever eaten dessert for breakfast.",
+          "Never have I ever fallen asleep watching a holiday movie."
+        ]
+      }
+    },
+    "prizes": {
+      "rowColDiag": null,
+      "xPattern": null
+    }
+  },
+  "gifts": {
+    "inventory": {
+      "US": [],
+      "India": [
+        {
+          "id": "gift_india_1765791386314",
+          "name": "Cab",
+          "amazonLink": "",
+          "imageUrl": "",
+          "claimed": true,
+          "claimedBy": {
+            "userId": "in_13",
+            "userName": "Sumit Joshi",
+            "claimedAt": "2025-12-15T10:05:24.542Z"
+          }
+        },
+        {
+          "id": "gift_india_1765791396971",
+          "name": "Money",
+          "amazonLink": "",
+          "imageUrl": "",
+          "claimed": false,
+          "claimedBy": null
+        },
+        {
+          "id": "gift_india_1765792005644",
+          "name": "rediminds",
+          "amazonLink": "",
+          "imageUrl": "/uploads/gift_1765791998653.jpg",
+          "claimed": false,
+          "claimedBy": null
+        }
+      ],
+      "UK": [],
+      "UAE": [],
+      "Lebanon": []
+    },
+    "claims": {
+      "in_13": {
+        "giftId": "gift_india_1765791386314",
+        "giftName": "Cab",
+        "amazonLink": "",
+        "claimedAt": "2025-12-15T10:05:24.542Z"
+      }
+    },
+    "openedBoxes": {
+      "in_13": [
+        2,
+        0
+      ],
+      "in_2": [
+        9,
+        0,
+        21,
+        16
+      ]
+    },
+    "boxCount": {
+      "US": 25,
+      "India": 25,
+      "UK": 3,
+      "UAE": 3,
+      "Lebanon": 3
+    }
+  },
+  "spiritWear": {
+    "contestants": [],
+    "votes": {}
+  }
+}

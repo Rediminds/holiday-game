@@ -40,7 +40,7 @@ const Login = () => {
                 <div className="text-center mb-8">
                     <img src="/rediminds_logo.jpg" alt="Rediminds" className="h-20 w-20 mx-auto rounded-xl shadow-lg mb-4" />
                     <h1 className="text-3xl font-bold text-white mb-2">Rediminds</h1>
-                    <h2 className="text-xl font-semibold text-cyan-300">🎄 Holiday Party 2024 🎄</h2>
+                    <h2 className="text-xl font-semibold text-cyan-300">🎄 Holiday Party 2025 🎄</h2>
                 </div>
 
                 <p className="mb-6 text-center text-white/80 font-medium">Select your name and enter your password to join!</p>

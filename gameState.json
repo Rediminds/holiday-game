@@ -1,5 +1,5 @@
 {
-  "currentStage": "GIFT_GAME",
+  "currentStage": "BINGO",
   "activeSessions": {},
   "bingo": {
     "items": [
@@ -155,7 +155,9 @@
         9,
         0,
         21,
-        16
+        16,
+        12,
+        1
       ]
     },
     "boxCount": {

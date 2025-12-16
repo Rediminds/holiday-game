@@ -1,16 +1,205 @@
 import React, { useState } from 'react';
 import { useSocket } from '../context/SocketContext';
-import users from '../../users.json';
+import usersData from '../../users.json';
 
 const STAGES = ['LOBBY', 'INTRO_EMOJI', 'BINGO', 'GIFT_GAME', 'SPIRIT_WEAR', 'CLOSING'];
 
 // Helper to convert user ID to name
 const getUserName = (userId) => {
-    const user = users.find(u => u.id === userId);
+    const user = usersData.find(u => u.id === userId);
     return user ? user.name : userId;
 };
 
-const REGIONS = ['US', 'India', 'UK', 'UAE', 'Lebanon'];
+const REGIONS = ['US', 'International'];
+
+// Users Tab Component
+const UsersTab = () => {
+    const [users, setUsers] = useState(usersData);
+    const [newUser, setNewUser] = useState({ name: '', email: '', role: 'participant', location: 'US' });
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+
+    const refreshUsers = async () => {
+        try {
+            const res = await fetch('/api/users');
+            const data = await res.json();
+            setUsers(data);
+        } catch (err) {
+            console.error('Failed to refresh users:', err);
+        }
+    };
+
+    const addUser = async () => {
+        if (!newUser.name.trim() || !newUser.email.trim()) {
+            setError('Name and email are required');
+            return;
+        }
+
+        setLoading(true);
+        setError('');
+        setSuccess('');
+
+        try {
+            const res = await fetch('/api/users', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(newUser)
+            });
+
+            const data = await res.json();
+
+            if (!res.ok) {
+                setError(data.error || 'Failed to add user');
+            } else {
+                setSuccess(`User "${data.name}" added successfully!`);
+                setNewUser({ name: '', email: '', role: 'participant', location: 'US' });
+                await refreshUsers();
+            }
+        } catch (err) {
+            setError('Failed to add user');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const deleteUser = async (userId, userName) => {
+        if (!confirm(`Are you sure you want to delete "${userName}"?`)) return;
+
+        try {
+            const res = await fetch('/api/users', {
+                method: 'DELETE',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ userId })
+            });
+
+            if (res.ok) {
+                setSuccess(`User "${userName}" deleted successfully!`);
+                await refreshUsers();
+            } else {
+                const data = await res.json();
+                setError(data.error || 'Failed to delete user');
+            }
+        } catch (err) {
+            setError('Failed to delete user');
+        }
+    };
+
+    const usersByLocation = REGIONS.reduce((acc, region) => {
+        acc[region] = users.filter(u => u.location === region);
+        return acc;
+    }, {});
+
+    return (
+        <div className="space-y-6">
+            {/* Add User Form */}
+            <div className="bg-white p-6 rounded shadow">
+                <h3 className="text-lg font-semibold mb-4">➕ Add New User</h3>
+
+                {error && (
+                    <div className="mb-4 p-3 bg-red-100 border border-red-300 text-red-700 rounded">
+                        {error}
+                    </div>
+                )}
+                {success && (
+                    <div className="mb-4 p-3 bg-green-100 border border-green-300 text-green-700 rounded">
+                        {success}
+                    </div>
+                )}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <input
+                        type="text"
+                        placeholder="Full Name *"
+                        value={newUser.name}
+                        onChange={(e) => setNewUser({ ...newUser, name: e.target.value })}
+                        className="p-2 border rounded"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Email Address *"
+                        value={newUser.email}
+                        onChange={(e) => setNewUser({ ...newUser, email: e.target.value })}
+                        className="p-2 border rounded"
+                    />
+                    <select
+                        value={newUser.role}
+                        onChange={(e) => setNewUser({ ...newUser, role: e.target.value })}
+                        className="p-2 border rounded"
+                    >
+                        <option value="participant">Participant</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                    <select
+                        value={newUser.location}
+                        onChange={(e) => setNewUser({ ...newUser, location: e.target.value })}
+                        className="p-2 border rounded"
+                    >
+                        {REGIONS.map(region => (
+                            <option key={region} value={region}>{region}</option>
+                        ))}
+                    </select>
+                </div>
+                <button
+                    onClick={addUser}
+                    disabled={loading || !newUser.name.trim() || !newUser.email.trim()}
+                    className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 disabled:opacity-50"
+                >
+                    {loading ? 'Adding...' : 'Add User'}
+                </button>
+            </div>
+
+            {/* Users by Location */}
+            {REGIONS.map(region => (
+                <div key={region} className="bg-white p-6 rounded shadow">
+                    <h3 className="text-lg font-semibold mb-4">
+                        📍 {region} ({usersByLocation[region].length} users)
+                    </h3>
+                    {usersByLocation[region].length === 0 ? (
+                        <p className="text-gray-500">No users in this region.</p>
+                    ) : (
+                        <table className="w-full text-left">
+                            <thead>
+                                <tr className="border-b">
+                                    <th className="p-2">Name</th>
+                                    <th className="p-2">Email</th>
+                                    <th className="p-2">Role</th>
+                                    <th className="p-2">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {usersByLocation[region].map(user => (
+                                    <tr key={user.id} className="border-b hover:bg-gray-50">
+                                        <td className="p-2 font-medium">{user.name}</td>
+                                        <td className="p-2 text-gray-600">{user.email}</td>
+                                        <td className="p-2">
+                                            <span className={`px-2 py-1 rounded text-xs font-medium ${user.role === 'admin'
+                                                ? 'bg-purple-100 text-purple-700'
+                                                : 'bg-blue-100 text-blue-700'
+                                                }`}>
+                                                {user.role}
+                                            </span>
+                                        </td>
+                                        <td className="p-2">
+                                            {user.role !== 'admin' && (
+                                                <button
+                                                    onClick={() => deleteUser(user.id, user.name)}
+                                                    className="text-red-500 hover:text-red-700 text-sm"
+                                                >
+                                                    ✕ Delete
+                                                </button>
+                                            )}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    )}
+                </div>
+            ))}
+        </div>
+    );
+};
 
 // Gifts Tab Component
 const GiftsTab = ({ socket, appState, getUserName }) => {
@@ -274,7 +463,7 @@ const AdminDashboard = () => {
             <div className="w-64 bg-gray-800 text-white flex flex-col">
                 <div className="p-4 text-xl font-bold border-b border-gray-700">Admin Panel</div>
                 <nav className="flex-1 p-4 space-y-2">
-                    {['OVERVIEW', 'BINGO', 'GIFTS', 'SPIRIT WEAR'].map(tab => (
+                    {['OVERVIEW', 'BINGO', 'GIFTS', 'SPIRIT WEAR', 'USERS'].map(tab => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}
@@ -504,6 +693,10 @@ const AdminDashboard = () => {
                             </div>
                         </div>
                     </div>
+                )}
+
+                {activeTab === 'USERS' && (
+                    <UsersTab />
                 )}
             </div>
         </div>

@@ -8,10 +8,13 @@ const GiftGame = () => {
     const [myOpenedBoxes, setMyOpenedBoxes] = useState([]);
     const [discoveredGifts, setDiscoveredGifts] = useState([]); // Track all gifts user has found
 
-    const region = currentUser?.location || 'US';
+    // Map all non-US locations to "International" pool for competition
+    const userLocation = currentUser?.location || 'US';
+    const region = userLocation === 'US' ? 'US' : 'International';
     const boxCount = appState?.gifts?.boxCount?.[region] || 25;
     const availableGifts = (appState?.gifts?.inventory?.[region] || []).filter(g => !g.claimed);
     const hasClaimed = appState?.gifts?.claims?.[currentUser?.id];
+
 
     useEffect(() => {
         if (!socket || !currentUser) return;
@@ -122,7 +125,7 @@ const GiftGame = () => {
             {/* Info */}
             <div className="flex gap-4 mb-4 text-sm flex-wrap justify-center">
                 <span className="bg-white/10 text-white px-4 py-2 rounded-lg">
-                    📍 Region: <strong>{region}</strong>
+                    📍 Region: <strong>{userLocation}{userLocation !== 'US' && ' (International Pool)'}</strong>
                 </span>
                 <span className="bg-green-500/20 text-green-300 px-4 py-2 rounded-lg">
                     🎁 Gifts Available: <strong>{availableGifts.length}</strong>
@@ -162,10 +165,10 @@ const GiftGame = () => {
             {openedBox && (
                 <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
                     <div className={`p-8 rounded-2xl shadow-2xl text-center max-w-md mx-4 ${openedBox.type === 'gift'
-                            ? 'bg-gradient-to-br from-yellow-400 to-orange-500'
-                            : openedBox.type === 'taken'
-                                ? 'bg-gradient-to-br from-red-400 to-red-600'
-                                : 'bg-gradient-to-br from-gray-600 to-gray-800'
+                        ? 'bg-gradient-to-br from-yellow-400 to-orange-500'
+                        : openedBox.type === 'taken'
+                            ? 'bg-gradient-to-br from-red-400 to-red-600'
+                            : 'bg-gradient-to-br from-gray-600 to-gray-800'
                         }`}>
                         <div className="text-6xl mb-4">
                             {openedBox.type === 'gift' ? '🎁✨' : openedBox.type === 'taken' ? '😢' : '📦'}

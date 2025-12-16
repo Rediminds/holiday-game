@@ -1,5 +1,5 @@
 {
-  "currentStage": "BINGO",
+  "currentStage": "GIFT_GAME",
   "activeSessions": {},
   "bingo": {
     "items": [
@@ -32,7 +32,132 @@
     "calledItems": [],
     "winners": [],
     "selections": {},
-    "userCards": {},
+    "userCards": {
+      "us_6": {
+        "odz": "us_6",
+        "name": "Nitish Dewan",
+        "items": [
+          "Never have I ever spilled something sparkly on myself.",
+          "Never have I ever accidentally talked on mute for a solid 10 seconds.",
+          "Never have I ever forgotten I had my camera on while doing something harmless but unprofessional.",
+          "Never have I ever panic-bought a gift at a gas station or drugstore.",
+          "Never have I ever binged an entire TV show series during a holiday break.",
+          "Never have I ever burned something while trying to bake.",
+          "Never have I ever dramatically complained about the cold while refusing to wear a real coat",
+          "Never have I ever pretended to enjoy a Secret Santa gift.",
+          "Never have I ever eaten dessert for breakfast.",
+          "Never have I ever eaten an entire batch of cookie dough.",
+          "Never have I ever gotten a random Teams call from Madhu",
+          "Never have I ever broken an ornament.",
+          "FREE SPACE",
+          "Never have I ever re-gifted a present.",
+          "Never have I ever wrapped a gift so poorly it became a joke.",
+          "Never have I ever fallen asleep watching a holiday movie.",
+          "Never have I ever worked on a major holiday.",
+          "Never have I ever worn pajamas on the bottom and a professional top on a Teams call.",
+          "Never have I ever worn an ugly sweater on purpose.",
+          "Never have I ever peeked at a gift early.",
+          "Never have I ever forgotten someone's gift until the last minute.",
+          "Never have I ever tried a traditional holiday meal from another country.",
+          "Never have I ever RSVP'd 'maybe' to a holiday party when I already knew I wasn't going",
+          "Never have I ever received a gift that made me genuinely confused.",
+          "Never have I ever pretended my WI-FI was breaking up just to leave a meeting early."
+        ]
+      },
+      "in_12": {
+        "odz": "in_12",
+        "name": "Varenyam Bhardwaj",
+        "items": [
+          "Never have I ever gotten a random Teams call from Madhu",
+          "Never have I ever pretended my WI-FI was breaking up just to leave a meeting early.",
+          "Never have I ever burned something while trying to bake.",
+          "Never have I ever RSVP'd 'maybe' to a holiday party when I already knew I wasn't going",
+          "Never have I ever broken an ornament.",
+          "Never have I ever worked on a major holiday.",
+          "Never have I ever binged an entire TV show series during a holiday break.",
+          "Never have I ever re-gifted a present.",
+          "Never have I ever pretended to enjoy a Secret Santa gift.",
+          "Never have I ever eaten dessert for breakfast.",
+          "Never have I ever eaten an entire batch of cookie dough.",
+          "Never have I ever received a gift that made me genuinely confused.",
+          "FREE SPACE",
+          "Never have I ever forgotten I had my camera on while doing something harmless but unprofessional.",
+          "Never have I ever fallen asleep watching a holiday movie.",
+          "Never have I ever wrapped a gift so poorly it became a joke.",
+          "Never have I ever peeked at a gift early.",
+          "Never have I ever spilled something sparkly on myself.",
+          "Never have I ever worn an ugly sweater on purpose.",
+          "Never have I ever worn pajamas on the bottom and a professional top on a Teams call.",
+          "Never have I ever panic-bought a gift at a gas station or drugstore.",
+          "Never have I ever accidentally talked on mute for a solid 10 seconds.",
+          "Never have I ever had a sword fight with a wrapping paper tube",
+          "Never have I ever tried a traditional holiday meal from another country.",
+          "Never have I ever forgotten someone's gift until the last minute."
+        ]
+      },
+      "in_8": {
+        "odz": "in_8",
+        "name": "Manish Mehra",
+        "items": [
+          "Never have I ever burned something while trying to bake.",
+          "Never have I ever peeked at a gift early.",
+          "Never have I ever pretended my WI-FI was breaking up just to leave a meeting early.",
+          "Never have I ever forgotten I had my camera on while doing something harmless but unprofessional.",
+          "Never have I ever panic-bought a gift at a gas station or drugstore.",
+          "Never have I ever forgotten someone's gift until the last minute.",
+          "Never have I ever re-gifted a present.",
+          "Never have I ever eaten dessert for breakfast.",
+          "Never have I ever binged an entire TV show series during a holiday break.",
+          "Never have I ever worn pajamas on the bottom and a professional top on a Teams call.",
+          "Never have I ever fallen asleep watching a holiday movie.",
+          "Never have I ever gotten a random Teams call from Madhu",
+          "FREE SPACE",
+          "Never have I ever dramatically complained about the cold while refusing to wear a real coat",
+          "Never have I ever worn an ugly sweater on purpose.",
+          "Never have I ever pretended to enjoy a Secret Santa gift.",
+          "Never have I ever eaten an entire batch of cookie dough.",
+          "Never have I ever worked on a major holiday.",
+          "Never have I ever RSVP'd 'maybe' to a holiday party when I already knew I wasn't going",
+          "Never have I ever accidentally talked on mute for a solid 10 seconds.",
+          "Never have I ever received a gift that made me genuinely confused.",
+          "Never have I ever wrapped a gift so poorly it became a joke.",
+          "Never have I ever tried a traditional holiday meal from another country.",
+          "Never have I ever broken an ornament.",
+          "Never have I ever spilled something sparkly on myself."
+        ]
+      },
+      "in_11": {
+        "odz": "in_11",
+        "name": "Rushi Sompura",
+        "items": [
+          "Never have I ever binged an entire TV show series during a holiday break.",
+          "Never have I ever forgotten I had my camera on while doing something harmless but unprofessional.",
+          "Never have I ever worn an ugly sweater on purpose.",
+          "Never have I ever accidentally talked on mute for a solid 10 seconds.",
+          "Never have I ever broken an ornament.",
+          "Never have I ever had a sword fight with a wrapping paper tube",
+          "Never have I ever forgotten someone's gift until the last minute.",
+          "Never have I ever wrapped a gift so poorly it became a joke.",
+          "Never have I ever tried a traditional holiday meal from another country.",
+          "Never have I ever spilled something sparkly on myself.",
+          "Never have I ever burned something while trying to bake.",
+          "Never have I ever received a gift that made me genuinely confused.",
+          "FREE SPACE",
+          "Never have I ever dramatically complained about the cold while refusing to wear a real coat",
+          "Never have I ever worn pajamas on the bottom and a professional top on a Teams call.",
+          "Never have I ever eaten an entire batch of cookie dough.",
+          "Never have I ever peeked at a gift early.",
+          "Never have I ever fallen asleep watching a holiday movie.",
+          "Never have I ever panic-bought a gift at a gas station or drugstore.",
+          "Never have I ever re-gifted a present.",
+          "Never have I ever RSVP'd 'maybe' to a holiday party when I already knew I wasn't going",
+          "Never have I ever pretended my WI-FI was breaking up just to leave a meeting early.",
+          "Never have I ever pretended to enjoy a Secret Santa gift.",
+          "Never have I ever eaten dessert for breakfast.",
+          "Never have I ever worked on a major holiday."
+        ]
+      }
+    },
     "prizes": {
       "rowColDiag": null,
       "xPattern": null
@@ -146,23 +271,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_us_14",
-          "name": "Amazon Gift Card - $10",
-          "amazonLink": "",
-          "imageUrl": "",
-          "claimed": false,
-          "claimedBy": null
-        },
-        {
           "id": "gift_us_15",
-          "name": "UberEats/Doordash Gift Card - $10",
-          "amazonLink": "",
-          "imageUrl": "",
-          "claimed": false,
-          "claimedBy": null
-        },
-        {
-          "id": "gift_us_16",
           "name": "UberEats/Doordash Gift Card - $10",
           "amazonLink": "",
           "imageUrl": "",
@@ -172,14 +281,6 @@
         {
           "id": "gift_us_17",
           "name": "Starbucks Gift Card - $15",
-          "amazonLink": "",
-          "imageUrl": "",
-          "claimed": false,
-          "claimedBy": null
-        },
-        {
-          "id": "gift_us_18",
-          "name": "Amazon Gift Card - $20",
           "amazonLink": "",
           "imageUrl": "",
           "claimed": false,
@@ -234,9 +335,9 @@
           "claimedBy": null
         }
       ],
-      "India": [
+      "International": [
         {
-          "id": "gift_india_1",
+          "id": "gift_intl_1",
           "name": "Zomato Gift Card - ₹1500",
           "amazonLink": "",
           "imageUrl": "",
@@ -244,7 +345,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_2",
+          "id": "gift_intl_2",
           "name": "Amazon Gift Card - ₹1500",
           "amazonLink": "",
           "imageUrl": "",
@@ -252,7 +353,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_3",
+          "id": "gift_intl_3",
           "name": "KRIVAZ Personalized Tumbler & Mug Set with Straw",
           "amazonLink": "https://www.amazon.in/dp/B0CQ6YH789",
           "imageUrl": "",
@@ -260,7 +361,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_4",
+          "id": "gift_intl_4",
           "name": "Octavius Ceramic Tea/Coffee Mug Warmer 350ml - Green",
           "amazonLink": "https://www.amazon.in/dp/B0CQ7KH456",
           "imageUrl": "",
@@ -268,7 +369,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_5",
+          "id": "gift_intl_5",
           "name": "ZOCI VOCI Personalized Bobblehead Caricature Standee",
           "amazonLink": "https://www.amazon.in/dp/B0CQ8LH789",
           "imageUrl": "",
@@ -276,7 +377,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_6",
+          "id": "gift_intl_6",
           "name": "AIMIUZI Laptop Cooling Pad - 5 Quiet Fans",
           "amazonLink": "https://www.amazon.in/dp/B0CQ9MH123",
           "imageUrl": "",
@@ -284,7 +385,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_7",
+          "id": "gift_intl_7",
           "name": "3D Frog Animal Cup Coffee Mug - 400ml (Funny)",
           "amazonLink": "https://www.amazon.in/dp/B0CQ1NH456",
           "imageUrl": "",
@@ -292,7 +393,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_8",
+          "id": "gift_intl_8",
           "name": "GODSDWARES Cat Socks with 3D Balls - 2 Pair Set (Funny)",
           "amazonLink": "https://www.amazon.in/dp/B0CQ2PH789",
           "imageUrl": "",
@@ -300,7 +401,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_9",
+          "id": "gift_intl_9",
           "name": "Mini Waffle Maker 3-in-1 - 350 Watt",
           "amazonLink": "https://www.amazon.in/dp/B0CQ3QH123",
           "imageUrl": "",
@@ -308,7 +409,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_10",
+          "id": "gift_intl_10",
           "name": "Amazon Basics Aero Tag - Bluetooth Tracker",
           "amazonLink": "https://www.amazon.in/dp/B0CQ4RH456",
           "imageUrl": "",
@@ -316,7 +417,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_11",
+          "id": "gift_intl_11",
           "name": "Zyozique Bollywood Funny Dialogues Coasters - Pack of 6",
           "amazonLink": "https://www.amazon.in/dp/B0CQ5SH789",
           "imageUrl": "",
@@ -324,15 +425,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_12",
-          "name": "Amazon Gift Card - ₹1000",
-          "amazonLink": "",
-          "imageUrl": "",
-          "claimed": false,
-          "claimedBy": null
-        },
-        {
-          "id": "gift_india_13",
+          "id": "gift_intl_13",
           "name": "Zomato Gift Card - ₹1000",
           "amazonLink": "",
           "imageUrl": "",
@@ -340,15 +433,7 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_14",
-          "name": "Amazon Gift Card - ₹500",
-          "amazonLink": "",
-          "imageUrl": "",
-          "claimed": false,
-          "claimedBy": null
-        },
-        {
-          "id": "gift_india_15",
+          "id": "gift_intl_15",
           "name": "Swiggy Gift Card - ₹1500",
           "amazonLink": "",
           "imageUrl": "",
@@ -356,71 +441,33 @@
           "claimedBy": null
         },
         {
-          "id": "gift_india_16",
+          "id": "gift_intl_16",
           "name": "AIMIUZI Laptop Cooling Pad - 5 Quiet Fans",
           "amazonLink": "https://www.amazon.in/dp/B0CQ9MH123",
           "imageUrl": "",
           "claimed": false,
           "claimedBy": null
-        }
-      ],
-      "UK": [
+        },
         {
-          "id": "gift_uk_1",
-          "name": "Amazon Gift Card - £15",
+          "id": "gift_intl_17",
+          "name": "Amazon Gift Card - ₹1500",
           "amazonLink": "",
           "imageUrl": "",
           "claimed": false,
           "claimedBy": null
         },
         {
-          "id": "gift_uk_2",
-          "name": "Amazon Gift Card - £20",
+          "id": "gift_intl_18",
+          "name": "Zomato Gift Card - ₹1500",
           "amazonLink": "",
           "imageUrl": "",
           "claimed": false,
           "claimedBy": null
         },
         {
-          "id": "gift_uk_3",
-          "name": "Amazon Gift Card - £10",
-          "amazonLink": "",
-          "imageUrl": "",
-          "claimed": false,
-          "claimedBy": null
-        }
-      ],
-      "UAE": [
-        {
-          "id": "gift_uae_1",
-          "name": "Amazon Gift Card - AED 75",
-          "amazonLink": "",
-          "imageUrl": "",
-          "claimed": false,
-          "claimedBy": null
-        },
-        {
-          "id": "gift_uae_4",
-          "name": "Amazon Gift Card - AED 50",
-          "amazonLink": "",
-          "imageUrl": "",
-          "claimed": false,
-          "claimedBy": null
-        }
-      ],
-      "Lebanon": [
-        {
-          "id": "gift_lebanon_1",
-          "name": "Amazon Gift Card - $20",
-          "amazonLink": "",
-          "imageUrl": "",
-          "claimed": false,
-          "claimedBy": null
-        },
-        {
-          "id": "gift_lebanon_3",
-          "name": "Amazon Gift Card - $15",
-          "amazonLink": "",
+          "id": "gift_intl_19",
+          "name": "Octavius Ceramic Tea/Coffee Mug Warmer 350ml - Green",
+          "amazonLink": "https://www.amazon.in/dp/B0CQ7KH456",
           "imageUrl": "",
           "claimed": false,
           "claimedBy": null
@@ -428,13 +475,17 @@
       ]
     },
     "claims": {},
-    "openedBoxes": {},
+    "openedBoxes": {
+      "in_11": [
+        0,
+        11,
+        10,
+        13
+      ]
+    },
     "boxCount": {
       "US": 25,
-      "India": 25,
-      "UK": 3,
-      "UAE": 3,
-      "Lebanon": 3
+      "International": 25
     }
   },
   "spiritWear": {

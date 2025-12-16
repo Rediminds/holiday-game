@@ -10,7 +10,7 @@ const getUserName = (userId) => {
     return user ? user.name : userId;
 };
 
-const REGIONS = ['US', 'India', 'UK', 'UAE', 'Lebanon'];
+const REGIONS = ['US', 'International'];
 
 // Users Tab Component
 const UsersTab = () => {

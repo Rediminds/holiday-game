@@ -271,5 +271,12 @@
     "email": "mohammed.yousif@rediminds.com",
     "role": "participant",
     "location": "UAE"
+  },
+  {
+    "id": "in_14",
+    "name": "Swathi",
+    "email": "swathi.d@rediminds.com",
+    "role": "participant",
+    "location": "India"
   }
 ]
